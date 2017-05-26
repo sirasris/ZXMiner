@@ -1,33 +1,22 @@
-# ZXMiner
+# ZXMiner (Last updated in April 2017)
 Source code for ZXMiner, a zero-length crosslinks identification tool originally published in http://pubs.acs.org/doi/abs/10.1021/pr400953w.
 
-###############################################################
-
-ZXMiner - Software tool for identification of zero-length chemical crosslinks
-
-Sira Sriswasdi
-PI: David W. Speicher, Ph.D.
-The Wistar Institute & University of Pennsylvania, PA, USA
-
-###############################################################
-
+# Index
 0. INTRODUCTION
 
 1. REQUIREMENT
 
 2. USER GUIDE
-	2.1 installation
-	2.2 preparing input files
-	2.3 configuration
-	2.4 types of output
-	2.5 reprocessing of allscores.out
-	2.6 running multiple instance of ZXMiner
+2.1 installation
+2.2 preparing input files
+2.3 configuration
+2.4 types of output
+2.5 reprocessing of allscores.out
+2.6 running multiple instance of ZXMiner
 
 3. SOURCE CODE & CITATION
 
-###############################################################
-
-0. INTRODUCTION
+# 0. INTRODUCTION
 ZXMiner is a software tool for facilitaing identification of zero-length crosslinks.
 The software is developed primarily based on crosslinking dataset using 
 1-Ethyl-3-[3-dimethylaminopropyl]carbodiimide hydrochloride (EDC) and Thermo's LTQ Orbitrap XL 
@@ -41,10 +30,10 @@ However, because different types of mass spectrometer do produce considerable va
 resulting MS/MS spectra of the same crosslinked peptide, please be careful when using ZXMiner to analyze 
 data from other instruments.
 
-1. REQUIREMENT
+# 1. REQUIREMENT
 Java 7. ZXMiner was developed using Java 7 without any external libraries.
 
-2. USER GUIDE
+# 2. USER GUIDE
 2.1 installation
 ZXMiner comes as a combination of ZXMiner.jar file and 5 main folders: config, input,
 output, sequence, and temp. "config", "input", and "sequence" folders are provided just for the sake of
@@ -181,17 +170,17 @@ spectrum for each peptide identified. Finally, "crosslinkSiteScores" contain det
 and include individual scores for every possible cross-link sites for peptides with multiple cross-linkable sites (accept those that were filtered out from "allScores" 
 by the "minScoreSite" setting in configuration file).
 
-	2.5 reprocessing of allscores.out
-		This option is provided so that the FDR can be re-calculated under different score filters without the need to re-run the entire process in ZXMiner.
+2.5 reprocessing of allscores.out
+This option is provided so that the FDR can be re-calculated under different score filters without the need to re-run the entire process in ZXMiner.
 This mode is activated by selecting the "allScores" file for "output file name". Right now, there are two filters available for reprocessing: ion coverage and deltaGM.
-We will include more control in the future versions of ZXMiner.
+We may include more control in the future versions of ZXMiner.
 
 2.6 running multiple instance of ZXMiner
 More CPU cores can be allocated to ZXMiner to speed up the process. However, if situations come up where running two ZXMiner processes in parallel is more desirable,
 because ZXMiner writes files with fixed names to the "temp" folder dynamically, multiple processes of ZXMiner will interfere with each other. To bypass this limitation, 
 please copy ZXMiner into two locations so that they can be run independently.
 
-3. SOURCE CODE & CITATION
+# 3. LICENSE & CITATION
 To allow for wider application of ZXMiner, the source code is provided under the MIT license so that others 
 can optimize the MS/MS processing step, peptide scoring step, etc. to suit their circumstances.
 
