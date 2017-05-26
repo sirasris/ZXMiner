@@ -1,0 +1,40 @@
+// DIGESTION
+cleavageDirection = C-term
+cleavageSite = KR
+cleavageRestriction = none				// default = trypsin without Proline restriction
+
+maxMissedCleave = 3
+
+minPeptideLength = 7
+maxPeptideLength = 50 					// limit on peptide size (individual peptide)
+
+fixedModification = C,carboxyamidomethyl,57.02146
+varModification = M,oxidation,15.99491			// format is "residue1,name1,mass1;residue1,name2,mass2;..."
+maxVarModPerPeptide = 3
+		
+// CROSSLINKING
+crosslinkerSiteA = K[
+crosslinkerSiteB = DE]					// [ and ] represents the protein N- and C-terminal residues
+crosslinkerDeltaMass = -18.01528			// default = EDC
+
+allowAdjacent = false					// whether to consider crosslinks of adjacent peptides
+		
+// MASS TOLERANCES
+precursorTolerance = 10					// ppm unit, 10 for 60K full scans, 15 for 15K
+fragmentTolerance = 0.5 				// ppm unit if isHighResFragmentTolerance = true, Da unit otherwise
+isHighResFragmentTolerance = false
+		
+// PEAK INTENSITY
+minPeakInt = 10
+minPeakIntToScore = 50
+		
+// DE-ISOTOPING
+isotopeWindowppm = 20 					// ppm unit, for determining isotopic envelopes
+		
+// NEUTRAL LOSSES
+numAion = 5 						// number of a-ion to consider
+numNeutralLoss = 2 					// number of water and ammonia loss to consider (each)
+enableMetOxLoss = true 					// whether to consider loss of oxidized methionine from precursor ions
+
+// OUTPUT
+minScoreSite = 0.2 					// for reducing the output file size, only retain information for candidates with GM score at least minScoreSite 
