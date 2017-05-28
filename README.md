@@ -6,12 +6,12 @@ Source code for ZXMiner, a zero-length crosslinks identification tool originally
 
 1. REQUIREMENT
 
-2. USER GUIDE
-2.1 installation
-2.2 preparing input files
-2.3 configuration
-2.4 types of output
-2.5 reprocessing of allscores.out
+2. USER GUIDE  
+2.1 installation  
+2.2 preparing input files  
+2.3 configuration  
+2.4 types of output  
+2.5 reprocessing of allscores.out  
 2.6 running multiple instance of ZXMiner
 
 3. SOURCE CODE & CITATION
